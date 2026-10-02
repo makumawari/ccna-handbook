@@ -1,0 +1,59 @@
+site_name: Network Fundamentals Handbook
+site_description: Handbook mạng máy tính bằng tiếng Việt cho Infra/DevOps/Cloud — IP, routing, DNS, TCP/TLS, bảo mật, AWS networking, troubleshooting.
+site_url: https://makumawari.github.io/ccna-handbook/
+repo_url: https://github.com/makumawari/ccna-handbook
+repo_name: makumawari/ccna-handbook
+
+docs_dir: book
+
+theme:
+  name: material
+  language: vi
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Chuyển sang chế độ tối
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Chuyển sang chế độ sáng
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+plugins:
+  - search:
+      lang:
+        - vi
+        - en
+  - tags
+  - awesome-pages
+
+markdown_extensions:
+  - admonition               # !!! note / warning
+  - pymdownx.details         # ??? block thu gọn (đáp án Interview)
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - tables
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true

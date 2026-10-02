@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(git push:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "Bash(git reset:*)",
+      "Bash(rm -rf:*)",
+      "Bash(docker system prune:*)",
+      "Bash(aws * delete-*)",
+      "Bash(aws cloudformation delete-stack:*)",
+      "Bash(terraform destroy:*)",
+      "PowerShell(git push:*)",
+      "PowerShell(git merge:*)",
+      "PowerShell(git rebase:*)",
+      "PowerShell(git reset:*)",
+      "PowerShell(Remove-Item * -Recurse*)",
+      "PowerShell(aws * delete-*)",
+      "PowerShell(aws cloudformation delete-stack:*)",
+      "PowerShell(terraform destroy:*)",
+      "Read(~/.aws/**)",
+      "Read(~/.ssh/**)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(**/forbidden-terms.local.txt)",
+      "Edit(~/.aws/**)",
+      "Edit(~/.ssh/**)"
+    ]
+  }
+}

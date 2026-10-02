@@ -1,0 +1,9 @@
+.venv/
+site/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Cục bộ / nhạy cảm — KHÔNG commit (CLAUDE.md mục 4, 6)
+.claude/settings.local.json
+tools/forbidden-terms.local.txt

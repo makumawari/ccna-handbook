@@ -1,0 +1,9 @@
+# MẪU danh sách từ cấm. Cách dùng:
+#   1. Sao chép file này thành tools/forbidden-terms.local.txt
+#   2. Điền mỗi dòng một từ/cụm cần tránh (tên công ty, khách hàng, dự án, hệ thống, hostname thật...). Không phân biệt hoa thường.
+#   3. KHÔNG commit file .local.txt (đã nằm trong .gitignore vì chính nó chứa thông tin nhạy cảm).
+# tools/lint_chapters.py quét book/, labs/, spec/, README.md, CLAUDE.md và báo nếu gặp các từ trong file .local.txt.
+# Dòng bắt đầu bằng # hoặc dòng trống được bỏ qua.
+#
+# Ví dụ (xóa dấu # khi dùng):
+# tencongtyvidu

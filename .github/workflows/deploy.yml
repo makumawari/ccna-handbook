@@ -1,0 +1,45 @@
+# verified: 2026-10-02 https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages (configure-pages@v5, upload-pages-artifact@v4, deploy-pages@v4)
+# verified: 2026-10-02 https://squidfunk.github.io/mkdocs-material/publishing-your-site/ (checkout@v4, setup-python@v5)
+name: deploy-docs
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Lint (encoding, links, Mermaid, thông tin nhạy cảm)
+        run: python tools/lint_chapters.py
+      - name: Build site
+        run: mkdocs build --strict
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

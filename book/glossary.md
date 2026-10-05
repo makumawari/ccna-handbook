@@ -9,6 +9,7 @@
 | ARP cache |  | bảng ARP | ARPキャッシュ | Bảng ghi nhớ các cặp IP ↔ MAC đã học | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | Authoritative name server | | máy chủ tên có thẩm quyền | 権威DNSサーバー | Máy chủ giữ bản ghi "chính chủ" của một tên miền và trả lời chắc chắn | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Bit | | bit | ビット | Đơn vị nhỏ nhất của máy tính, chỉ nhận 0 hoặc 1 | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
+| Blackhole route |  | tuyến "hố đen" | ブラックホールルート | Dòng route khiến gói tin tới đích bị loại bỏ thay vì chuyển đi | [02/02](phase-02-routing/02-longest-prefix-match.md) |
 | Block size | | kích thước khối | ブロックサイズ | Số địa chỉ trong một mạng con, bằng 2^(32−prefix) | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Broadcast address | | địa chỉ quảng bá | ブロードキャストアドレス | Địa chỉ có mọi bit phần máy bằng 1; gửi đến đó là gửi cho mọi máy trong mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Cache | | bộ nhớ đệm | キャッシュ | Nơi lưu tạm câu trả lời để lần sau dùng lại | [03/02](phase-03-core-services/02-dns-resolution.md) |
@@ -38,6 +39,7 @@
 | Lease | | thời hạn thuê | リース | Khoảng thời gian một địa chỉ được cấp cho một máy | [03/01](phase-03-core-services/01-dhcp.md) |
 | Link-local | | địa chỉ cục bộ tự cấp | リンクローカルアドレス | Địa chỉ máy tự gán trong dải `169.254.0.0/16`, chỉ dùng được với máy cùng đường dây | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Listening | | đang lắng nghe | リッスン | Dịch vụ đã mở cổng và chờ có người kết nối đến | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
+| Longest prefix match |  | khớp tiền tố dài nhất | 最長一致 | Quy tắc chọn dòng route có độ dài prefix lớn nhất trong những dòng cùng khớp địa chỉ đích | [02/02](phase-02-routing/02-longest-prefix-match.md) |
 | Loopback | | vòng lặp nội bộ | ループバック | Địa chỉ (`127.0.0.1`) để máy nói chuyện với chính nó | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | MAC address | MAC | địa chỉ phần cứng | MACアドレス | Mã định danh của card mạng | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | Metric | | số đo chi phí | メトリック | Khi nhiều dòng route cùng khớp, dòng có số nhỏ hơn được ưu tiên | [02/01](phase-02-routing/01-routing-table-basics.md) |
@@ -64,6 +66,7 @@
 | RFC 1918 |  | dải địa chỉ riêng theo RFC 1918 | RFC 1918 | Tài liệu chuẩn định nghĩa ba dải địa chỉ private | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Root server | | máy chủ gốc | ルートサーバー | Tầng trên cùng của cây DNS; chỉ đường xuống tầng dưới | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Route | | tuyến | 経路 | Một dòng trong bảng định tuyến | [02/01](phase-02-routing/01-routing-table-basics.md) |
+| Route aggregation |  | gộp tuyến | 経路集約 | Dùng một dòng prefix ngắn thay cho nhiều dòng prefix dài nằm trong nó | [02/02](phase-02-routing/02-longest-prefix-match.md) |
 | Router | | bộ định tuyến | ルーター | Thiết bị nhận gói tin rồi chuyển đến chặng kế tiếp theo địa chỉ đích | [01/01](phase-01-foundation/01-packet-journey.md) |
 | Routing | | định tuyến | ルーティング | Quá trình chọn đường cho gói tin | [02/01](phase-02-routing/01-routing-table-basics.md) |
 | Routing table | | bảng định tuyến | ルーティングテーブル | Danh sách "đích nào thì gửi qua đường nào" mà mỗi thiết bị giữ | [02/01](phase-02-routing/01-routing-table-basics.md) |

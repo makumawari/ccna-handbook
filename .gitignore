@@ -15,3 +15,10 @@ tools/forbidden-terms.local.txt
 # Khóa riêng và chứng chỉ thử của lab TLS — KHÔNG commit (book/phase-04 chapter 06)
 *.pem
 *.key
+
+# Khóa SSH — KHÔNG commit (book/phase-05 chapter 05)
+id_rsa*
+id_ed25519*
+id_ecdsa*
+lab-key
+lab-key.pub

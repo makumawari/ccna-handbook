@@ -1,7 +1,6 @@
 {
   "permissions": {
     "deny": [
-      "Bash(git push:*)",
       "Bash(git merge:*)",
       "Bash(git rebase:*)",
       "Bash(git reset:*)",
@@ -10,7 +9,6 @@
       "Bash(aws * delete-*)",
       "Bash(aws cloudformation delete-stack:*)",
       "Bash(terraform destroy:*)",
-      "PowerShell(git push:*)",
       "PowerShell(git merge:*)",
       "PowerShell(git rebase:*)",
       "PowerShell(git reset:*)",

@@ -19,6 +19,8 @@ Chưa chốt: phiên bản blueprint CCNA (v1.1 hay v2.0) — chờ PDF trong `s
 
 `.claude/settings.json` (deny rules) đã tạo và thử toàn bộ rule ngày 2026-10-02.
 
+Quyền (2026-10-05): người dùng yêu cầu gỡ deny rule `git push` (Bash và PowerShell) khỏi `.claude/settings.json`; còn lại 22 rule (merge, rebase, reset, xóa, AWS, đọc/ghi credential…). Force-push không còn bị chặn bằng kỹ thuật, chỉ còn quy tắc hành vi trong CLAUDE.md.
+
 Deploy (2026-10-02): người dùng quyết định đưa repo lên `github.com/makumawari/ccna-handbook`; đặt `site_url`/`repo_url` trong `mkdocs.yml`, thêm `.github/workflows/deploy.yml` (lint + `mkdocs build --strict` + GitHub Pages) và `README.md`; cập nhật Part 3 §9. Lint thêm `100.64.0.0/10` vào dải IP được phép và dấu `lint:allow-ip-file`.
 
 Scaffold (2026-10-02): tạo 59 chapter `todo` + `00-resolved-gap-log.md` từ bảng Part 4. Sửa Part 4 §3: `08/04` Prerequisites từ "06/* (chọn lọc)" thành `06/02, 06/03, 06/04, 06/08, 06/11` để metadata khớp roadmap.

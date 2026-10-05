@@ -54,7 +54,7 @@ Sau chapter này bạn có thể:
 > Xem lại: [firewall-stateful-vs-stateless](01-firewall-stateful-vs-stateless.md)
 > Xem lại: [acl](02-acl.md)
 
-Hai chapter trên (khái niệm firewall và ACL) hiện chưa viết; chapter này **giới thiệu tối thiểu** những gì cần dùng (mục 6), và sẽ được rút gọn và liên kết lại khi chúng có. Bạn cũng cần nhớ bắt tay TCP và trạng thái kết nối (`04/01`), cổng (`04/04`, tạm thời giới thiệu ở mục 6), và ICMP có thể bị chặn riêng (`03/04`).
+Khái niệm stateful/stateless và theo dõi kết nối được giải thích kỹ ở `05/01`; chapter `05/02` (ACL) hiện chưa viết, nên chapter này vẫn **giới thiệu tối thiểu** những gì cần dùng (mục 6) và sẽ được rút gọn khi `05/02` có. Bạn cũng cần nhớ bắt tay TCP và trạng thái kết nối (`04/01`), cổng (`04/04`, tạm thời giới thiệu ở mục 6), và ICMP có thể bị chặn riêng (`03/04`).
 
 ## 4. Why it exists
 

@@ -4,8 +4,10 @@
 
 | English | Viết tắt | Tiếng Việt | 日本語 | Giải thích đơn giản | Chapter |
 |---|---|---|---|---|---|
+| 5-tuple |  | bộ năm | 5タプル | Năm trường xác định một luồng: IP nguồn, IP đích, giao thức, cổng nguồn, cổng đích | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | A record |  | bản ghi A | Aレコード | Bản ghi đổi tên thành địa chỉ IPv4 (AAAA: IPv6) | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Address pool | | dải địa chỉ cấp phát | アドレスプール | Khoảng địa chỉ mà DHCP server được phép cho thuê | [03/01](phase-03-core-services/01-dhcp.md) |
+| Application-layer firewall |  | firewall tầng ứng dụng | アプリケーション層ファイアウォール | Firewall hiểu nội dung giao thức tầng 7, ví dụ tên miền hoặc đường dẫn HTTP | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | ARP (Address Resolution Protocol) | ARP | giao thức phân giải địa chỉ | ARP | Cách máy hỏi "IP này là MAC nào?" trong cùng một mạng | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | ARP cache |  | bảng ARP | ARPキャッシュ | Bảng ghi nhớ các cặp IP ↔ MAC đã học | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | Authoritative name server | | máy chủ tên có thẩm quyền | 権威DNSサーバー | Máy chủ giữ bản ghi "chính chủ" của một tên miền và trả lời chắc chắn | [03/02](phase-03-core-services/02-dns-resolution.md) |
@@ -21,9 +23,10 @@
 | CIDR (Classless Inter-Domain Routing) | CIDR | định tuyến liên miền không phân lớp | CIDR | Cách viết dải địa chỉ bằng địa chỉ cộng độ dài phần mạng, ví dụ `10.0.1.0/24` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | CNAME record |  | bản ghi bí danh | CNAMEレコード | Nói "tên này là bí danh của tên kia"; resolver hỏi tiếp tên đích | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Connection state |  | trạng thái kết nối | コネクション状態 | Giai đoạn hiện tại của một kết nối TCP, ví dụ ESTABLISHED | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
-| Connection tracking |  | theo dõi kết nối | コネクショントラッキング | Cơ chế bộ lọc stateful dùng để nhớ từng kết nối | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
+| Connection tracking |  | theo dõi kết nối | コネクショントラッキング | Cơ chế bộ lọc stateful dùng để nhớ từng kết nối | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | Container | | vùng chạy riêng | コンテナ | Chương trình chạy tách biệt khỏi phần còn lại của máy, có mạng và hệ thống file riêng | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | Container image | | ảnh container | コンテナイメージ | Gói chứa chương trình và môi trường, dùng làm "khuôn" tạo container | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
+| Default deny |  | từ chối mặc định | デフォルト拒否 | Chính sách chặn mọi thứ chưa được cho phép tường minh | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | Default gateway | | cổng mặc định | デフォルトゲートウェイ | Router mà máy gửi mọi gói tin có đích nằm ngoài LAN | [01/01](phase-01-foundation/01-packet-journey.md) |
 | Default route | | tuyến mặc định | デフォルトルート | Dòng `0.0.0.0/0` khớp mọi địa chỉ; chỉ dùng khi không có dòng nào cụ thể hơn | [02/01](phase-02-routing/01-routing-table-basics.md) |
 | Defense in depth |  | phòng thủ nhiều lớp | 多層防御 | Dùng nhiều lớp bảo vệ độc lập để một lớp sai không làm hở cả hệ thống | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
@@ -34,10 +37,13 @@
 | DNS record |  | bản ghi DNS | DNSレコード | Một dòng dữ liệu trong cơ sở dữ liệu DNS, gồm tên, loại, giá trị và TTL | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | DNS TTL | | thời gian lưu của bản ghi DNS | DNSのTTL | Số giây câu trả lời DNS được phép nằm trong cache (khác TTL của gói tin) | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Documentation address range |  | dải địa chỉ dành cho tài liệu | ドキュメント用アドレス範囲 | Dải cố ý không dùng thật, để làm ví dụ mà không trỏ nhầm tới ai | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
+| Egress |  | chiều ra | アウトバウンド | Lưu lượng đi ra khỏi thứ được bảo vệ | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | Encapsulation |  | đóng gói | カプセル化 | Mỗi tầng bọc dữ liệu của tầng trên bằng header của mình | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | Ephemeral port |  | cổng tạm thời | エフェメラルポート | Cổng ngẫu nhiên client chọn làm cổng nguồn; server trả lời về đúng cổng này | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Ethernet |  | chuẩn mạng có dây | イーサネット | Chuẩn mạng có dây phổ biến, quy định dạng khung và cách gửi | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | FIN |  | cờ kết thúc | FIN | Thông báo bên gửi không còn dữ liệu để gửi nữa | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
+| Firewall |  | tường lửa | ファイアウォール | Thiết bị hoặc phần mềm lọc lưu lượng theo quy tắc, cho phép hoặc chặn | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
+| Flow |  | luồng | フロー | Chuỗi gói tin cùng chung các trường của bộ năm trong một cuộc trao đổi | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | FQDN | FQDN | tên miền đầy đủ | FQDN | Tên đủ các phần tới gốc, ví dụ `www.shopnet.example` | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Frame |  | khung | フレーム | Đơn vị dữ liệu ở tầng liên kết, bọc bởi header của đường truyền | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | Header |  | phần đầu | ヘッダー | Thông tin điều khiển mỗi tầng thêm vào trước dữ liệu | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
@@ -47,7 +53,8 @@
 | HTTPS | HTTPS | HTTP trên TLS | HTTPS | HTTP được mã hóa bằng TLS, thường dùng cổng 443 | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | ICMP (Internet Control Message Protocol) | ICMP | giao thức thông điệp điều khiển Internet | ICMP | Giao thức đi kèm IP, dùng để báo lỗi và kiểm tra liên lạc | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | Idempotent |  | lặp lại được | 冪等 | Gửi nhiều lần cho kết quả như gửi một lần | [04/05](phase-04-transport-app/05-http.md) |
-| Implicit deny |  | từ chối ngầm | 暗黙の拒否 | Gói không khớp quy tắc nào bị từ chối | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
+| Implicit deny |  | từ chối ngầm | 暗黙の拒否 | Gói không khớp quy tắc nào bị từ chối | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
+| Ingress |  | chiều vào | インバウンド | Lưu lượng đi vào thứ được bảo vệ | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | IP address | | địa chỉ IP | IPアドレス | Dãy số dùng làm địa chỉ của một máy trên mạng | [01/01](phase-01-foundation/01-packet-journey.md) |
 | IPv4 | IPv4 | địa chỉ IP phiên bản 4 | IPv4アドレス | Địa chỉ dài 32 bit, viết thành bốn số cách nhau bằng dấu chấm | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Lab environment | | môi trường thực hành | ラボ環境 | Nơi chạy lệnh thử mà không ảnh hưởng đến máy hay hệ thống thật | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
@@ -78,6 +85,7 @@
 | OSI model | OSI | mô hình OSI | OSI参照モデル | Mô hình tham chiếu 7 tầng, dùng làm ngôn ngữ chung khi nói về mạng | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | Packet | | gói tin | パケット | Một mẩu dữ liệu kèm địa chỉ người gửi và người nhận để gửi qua mạng | [01/01](phase-01-foundation/01-packet-journey.md) |
 | Packet capture |  | bắt gói tin | パケットキャプチャ | Ghi lại bản sao các gói tin đi qua một giao diện mạng để phân tích | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |
+| Packet filtering |  | lọc gói tin | パケットフィルタリング | Quyết định từng gói dựa trên các trường như địa chỉ, giao thức, cổng | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | Packet loss |  | mất gói | パケットロス | Tỷ lệ gói gửi đi mà không nhận được trả lời | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | PAT | PAT | dịch cổng và địa chỉ | PAT | Dạng NAT đổi cả địa chỉ lẫn cổng, để nhiều máy dùng chung một địa chỉ công khai (còn gọi là NAPT) | [02/05](phase-02-routing/05-nat-pat.md) |
 | Path MTU Discovery | PMTUD | dò MTU của cả đường đi | パスMTUディスカバリ | Cách máy tìm MTU nhỏ nhất trên đường tới đích nhờ thông điệp ICMP | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
@@ -116,8 +124,9 @@
 | SNI (Server Name Indication) | SNI | chỉ dẫn tên máy chủ | SNI | Client nêu tên miền muốn truy cập ngay trong ClientHello để server chọn đúng chứng chỉ | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | SOA record |  | bản ghi khởi đầu vùng | SOAレコード | Thông tin quản trị của một zone, gồm giá trị quyết định thời gian nhớ đáp án phủ định | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Split-horizon DNS |  | DNS chân trời kép | スプリットホライズンDNS | Cùng một tên miền nhưng câu trả lời khác nhau tùy máy hỏi ở trong hay ngoài mạng | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
-| Stateful |  | có trạng thái | ステートフル | Bộ lọc nhớ các kết nối đang diễn ra nên tự cho phép gói trả lời của kết nối đã được phép | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
-| Stateless |  | không lưu trạng thái | ステートレス | Mỗi yêu cầu tự đủ thông tin, server không dựa vào yêu cầu trước | [04/05](phase-04-transport-app/05-http.md) |
+| State table |  | bảng trạng thái | ステートテーブル | Bảng firewall dùng để nhớ các kết nối đang được theo dõi (còn gọi là conntrack) | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
+| Stateful |  | có trạng thái | ステートフル | Bộ lọc nhớ các kết nối đang diễn ra nên tự cho phép gói trả lời của kết nối đã được phép | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
+| Stateless |  | không lưu trạng thái | ステートレス | Mỗi yêu cầu tự đủ thông tin, server không dựa vào yêu cầu trước | [05/01](phase-05-security/01-firewall-stateful-vs-stateless.md) |
 | Status code |  | mã trạng thái | ステータスコード | Số ba chữ số trong phản hồi HTTP nói kết quả, ví dụ 200, 404, 502 | [04/05](phase-04-transport-app/05-http.md) |
 | Subnet | | mạng con | サブネット | Một phần của mạng lớn, chia ra để quản lý và cô lập | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Subnet mask | | mặt nạ mạng | サブネットマスク | Dãy 32 bit cho biết bao nhiêu bit đầu của địa chỉ thuộc phần mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |

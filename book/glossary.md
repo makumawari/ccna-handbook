@@ -13,8 +13,11 @@
 | Blackhole route |  | tuyến "hố đen" | ブラックホールルート | Dòng route khiến gói tin tới đích bị loại bỏ thay vì chuyển đi | [02/02](phase-02-routing/02-longest-prefix-match.md) |
 | Block size | | kích thước khối | ブロックサイズ | Số địa chỉ trong một mạng con, bằng 2^(32−prefix) | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Broadcast address | | địa chỉ quảng bá | ブロードキャストアドレス | Địa chỉ có mọi bit phần máy bằng 1; gửi đến đó là gửi cho mọi máy trong mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
+| CA (Certificate Authority) | CA | tổ chức cấp chứng chỉ | 認証局 | Bên đáng tin ký xác nhận chứng chỉ | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Cache | | bộ nhớ đệm | キャッシュ | Nơi lưu tạm câu trả lời để lần sau dùng lại | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Capture filter |  | bộ lọc lúc bắt | キャプチャフィルタ | Điều kiện quyết định gói nào được ghi lại; gói không khớp bị bỏ ngay | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |
+| Certificate |  | chứng chỉ | 証明書 | Tệp ghi tên chủ sở hữu, khóa công khai, thời hạn và chữ ký của bên cấp | [04/06](phase-04-transport-app/06-tls-certificates.md) |
+| Certificate chain |  | chuỗi chứng chỉ | 証明書チェーン | Dãy chứng chỉ từ chứng chỉ của server lên qua CA trung gian tới CA gốc | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | CIDR (Classless Inter-Domain Routing) | CIDR | định tuyến liên miền không phân lớp | CIDR | Cách viết dải địa chỉ bằng địa chỉ cộng độ dài phần mạng, ví dụ `10.0.1.0/24` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | CNAME record |  | bản ghi bí danh | CNAMEレコード | Nói "tên này là bí danh của tên kia"; resolver hỏi tiếp tên đích | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Connection state |  | trạng thái kết nối | コネクション状態 | Giai đoạn hiện tại của một kết nối TCP, ví dụ ESTABLISHED | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
@@ -38,6 +41,7 @@
 | Hop | | chặng | ホップ | Mỗi lần gói tin đi qua một router trên đường đi | [01/01](phase-01-foundation/01-packet-journey.md) |
 | Host | | máy chủ vật chủ | ホスト | Máy thật đang chạy mọi thứ khác (ở đây là máy Windows của bạn) | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | HTTP | HTTP | giao thức web | HTTP | Cách trình duyệt và server nói chuyện với nhau | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
+| HTTPS | HTTPS | HTTP trên TLS | HTTPS | HTTP được mã hóa bằng TLS, thường dùng cổng 443 | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | ICMP (Internet Control Message Protocol) | ICMP | giao thức thông điệp điều khiển Internet | ICMP | Giao thức đi kèm IP, dùng để báo lỗi và kiểm tra liên lạc | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | Idempotent |  | lặp lại được | 冪等 | Gửi nhiều lần cho kết quả như gửi một lần | [04/05](phase-04-transport-app/05-http.md) |
 | IP address | | địa chỉ IP | IPアドレス | Dãy số dùng làm địa chỉ của một máy trên mạng | [01/01](phase-01-foundation/01-packet-journey.md) |
@@ -79,9 +83,11 @@
 | Prefix length | | độ dài tiền tố | プレフィックス長 | Số bit đầu thuộc phần mạng, số sau dấu `/` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Private DNS |  | DNS nội bộ | プライベートDNS | Vùng DNS chỉ trả lời cho máy trong một mạng nhất định, không công khai | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Private IP address | | địa chỉ IP riêng | プライベートIPアドレス | Địa chỉ thuộc dải dành cho mạng nội bộ; Internet không định tuyến dải này | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
+| Private key |  | khóa riêng | 秘密鍵 | Nửa bí mật của cặp khóa; chỉ chủ sở hữu giữ, dùng để chứng minh mình là chủ; không bao giờ commit | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Protocol |  | giao thức | プロトコル | Bộ quy tắc hai bên cùng tuân theo để nói chuyện | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | PTR record |  | bản ghi tra ngược | PTRレコード | Đổi địa chỉ IP thành tên | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Public IP address | | địa chỉ IP công khai | グローバルIPアドレス | Địa chỉ duy nhất toàn Internet, ai cũng gửi gói tới được | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
+| Public key |  | khóa công khai | 公開鍵 | Nửa công khai của cặp khóa; nằm trong chứng chỉ, ai cũng biết | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Recursive resolver | | bộ phân giải đệ quy | 再帰リゾルバー | Máy chủ DNS nhận câu hỏi của máy bạn rồi tự hỏi các máy chủ khác cho tới khi có đáp án | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Request |  | yêu cầu | リクエスト | Một chiều của lần trao đổi HTTP: phía gửi nêu phương thức và đích | [04/05](phase-04-transport-app/05-http.md) |
 | Reservation | | đặt trước | 予約 | Luôn cấp cùng một địa chỉ cho một MAC address nhất định | [03/01](phase-03-core-services/01-dhcp.md) |
@@ -96,9 +102,12 @@
 | Routing table | | bảng định tuyến | ルーティングテーブル | Danh sách "đích nào thì gửi qua đường nào" mà mỗi thiết bị giữ | [02/01](phase-02-routing/01-routing-table-basics.md) |
 | RST |  | cờ đặt lại | RST | Ngắt kết nối ngay lập tức, thường vì lỗi hoặc vì không có dịch vụ ở cổng đó | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
 | RTT (Round-Trip Time) | RTT | thời gian khứ hồi | 往復遅延時間 | Thời gian từ lúc gửi tới lúc nhận trả lời | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
+| SAN (Subject Alternative Name) | SAN | tên thay thế của chủ thể | サブジェクト代替名 | Danh sách tên miền mà chứng chỉ có hiệu lực; client so tên truy cập với danh sách này | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Segment |  | đoạn | セグメント | Đơn vị dữ liệu ở tầng vận chuyển, bọc bởi header TCP | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
+| Self-signed certificate |  | chứng chỉ tự ký | 自己署名証明書 | Chứng chỉ do chính chủ ký, không có CA đáng tin xác nhận | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Sequence number |  | số thứ tự | シーケンス番号 | Số đánh dấu từng byte dữ liệu để bên nhận sắp xếp và xác nhận | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
 | Shared address space | CGNAT | không gian địa chỉ dùng chung | 共有アドレス空間 | Dải `100.64.0.0/10` nhà mạng dùng cho CGNAT; không phải private cũng không phải public | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
+| SNI (Server Name Indication) | SNI | chỉ dẫn tên máy chủ | SNI | Client nêu tên miền muốn truy cập ngay trong ClientHello để server chọn đúng chứng chỉ | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | SOA record |  | bản ghi khởi đầu vùng | SOAレコード | Thông tin quản trị của một zone, gồm giá trị quyết định thời gian nhớ đáp án phủ định | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Split-horizon DNS |  | DNS chân trời kép | スプリットホライズンDNS | Cùng một tên miền nhưng câu trả lời khác nhau tùy máy hỏi ở trong hay ngoài mạng | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Stateless |  | không lưu trạng thái | ステートレス | Mỗi yêu cầu tự đủ thông tin, server không dựa vào yêu cầu trước | [04/05](phase-04-transport-app/05-http.md) |
@@ -112,7 +121,10 @@
 | TCP/IP model |  | mô hình TCP/IP | TCP/IPモデル | Mô hình 4 tầng mô tả cách Internet thực sự vận hành | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | tcpdump |  | công cụ bắt gói dòng lệnh | tcpdump | Công cụ dòng lệnh để bắt và hiển thị gói tin trên Linux | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |
 | Three-way handshake |  | bắt tay ba bước | 3ウェイハンドシェイク | Ba gói SYN, SYN-ACK, ACK để mở một kết nối TCP | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
+| TLS (Transport Layer Security) | TLS | bảo mật tầng vận chuyển | TLS | Giao thức thêm mã hóa, xác thực và toàn vẹn lên trên một kết nối TCP | [04/06](phase-04-transport-app/06-tls-certificates.md) |
+| TLS termination |  | kết thúc TLS | TLS終端 | Thiết bị, thường là load balancer, giải mã TLS ở đó | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Traceroute |  | lệnh dò đường | traceroute | Liệt kê các router trên đường tới đích bằng gói có TTL tăng dần (Windows: `tracert`) | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
+| Trust store |  | kho tin cậy | トラストストア | Danh sách CA gốc mà hệ điều hành hoặc trình duyệt tin sẵn | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | TTL (Time To Live) | TTL | thời gian sống | 生存時間 | Số chặng tối đa còn lại của gói tin; mỗi router trừ 1, về 0 thì gói bị bỏ | [01/01](phase-01-foundation/01-packet-journey.md) |
 | TXT record |  | bản ghi văn bản | TXTレコード | Chuỗi chữ tùy ý, thường dùng để xác minh quyền sở hữu hoặc cấu hình xác thực email | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Wireshark |  | công cụ phân tích gói đồ họa | Wireshark | Công cụ có giao diện đồ họa để mở và phân tích gói tin | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |

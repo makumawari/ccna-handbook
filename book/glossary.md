@@ -21,10 +21,12 @@
 | CIDR (Classless Inter-Domain Routing) | CIDR | định tuyến liên miền không phân lớp | CIDR | Cách viết dải địa chỉ bằng địa chỉ cộng độ dài phần mạng, ví dụ `10.0.1.0/24` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | CNAME record |  | bản ghi bí danh | CNAMEレコード | Nói "tên này là bí danh của tên kia"; resolver hỏi tiếp tên đích | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Connection state |  | trạng thái kết nối | コネクション状態 | Giai đoạn hiện tại của một kết nối TCP, ví dụ ESTABLISHED | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
+| Connection tracking |  | theo dõi kết nối | コネクショントラッキング | Cơ chế bộ lọc stateful dùng để nhớ từng kết nối | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Container | | vùng chạy riêng | コンテナ | Chương trình chạy tách biệt khỏi phần còn lại của máy, có mạng và hệ thống file riêng | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | Container image | | ảnh container | コンテナイメージ | Gói chứa chương trình và môi trường, dùng làm "khuôn" tạo container | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | Default gateway | | cổng mặc định | デフォルトゲートウェイ | Router mà máy gửi mọi gói tin có đích nằm ngoài LAN | [01/01](phase-01-foundation/01-packet-journey.md) |
 | Default route | | tuyến mặc định | デフォルトルート | Dòng `0.0.0.0/0` khớp mọi địa chỉ; chỉ dùng khi không có dòng nào cụ thể hơn | [02/01](phase-02-routing/01-routing-table-basics.md) |
+| Defense in depth |  | phòng thủ nhiều lớp | 多層防御 | Dùng nhiều lớp bảo vệ độc lập để một lớp sai không làm hở cả hệ thống | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | DHCP (Dynamic Host Configuration Protocol) | DHCP | giao thức cấp địa chỉ tự động | DHCP | Cách một server cấp IP và thông số mạng cho máy vừa vào mạng | [03/01](phase-03-core-services/01-dhcp.md) |
 | DHCP server | | máy chủ DHCP | DHCPサーバー | Thiết bị giữ danh sách địa chỉ và cấp cho máy xin | [03/01](phase-03-core-services/01-dhcp.md) |
 | Display filter |  | bộ lọc lúc xem | 表示フィルタ | Điều kiện chỉ để lọc hiển thị trên dữ liệu đã bắt | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |
@@ -33,6 +35,7 @@
 | DNS TTL | | thời gian lưu của bản ghi DNS | DNSのTTL | Số giây câu trả lời DNS được phép nằm trong cache (khác TTL của gói tin) | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Documentation address range |  | dải địa chỉ dành cho tài liệu | ドキュメント用アドレス範囲 | Dải cố ý không dùng thật, để làm ví dụ mà không trỏ nhầm tới ai | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Encapsulation |  | đóng gói | カプセル化 | Mỗi tầng bọc dữ liệu của tầng trên bằng header của mình | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
+| Ephemeral port |  | cổng tạm thời | エフェメラルポート | Cổng ngẫu nhiên client chọn làm cổng nguồn; server trả lời về đúng cổng này | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Ethernet |  | chuẩn mạng có dây | イーサネット | Chuẩn mạng có dây phổ biến, quy định dạng khung và cách gửi | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | FIN |  | cờ kết thúc | FIN | Thông báo bên gửi không còn dữ liệu để gửi nữa | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
 | FQDN | FQDN | tên miền đầy đủ | FQDN | Tên đủ các phần tới gốc, ví dụ `www.shopnet.example` | [03/02](phase-03-core-services/02-dns-resolution.md) |
@@ -44,6 +47,7 @@
 | HTTPS | HTTPS | HTTP trên TLS | HTTPS | HTTP được mã hóa bằng TLS, thường dùng cổng 443 | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | ICMP (Internet Control Message Protocol) | ICMP | giao thức thông điệp điều khiển Internet | ICMP | Giao thức đi kèm IP, dùng để báo lỗi và kiểm tra liên lạc | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | Idempotent |  | lặp lại được | 冪等 | Gửi nhiều lần cho kết quả như gửi một lần | [04/05](phase-04-transport-app/05-http.md) |
+| Implicit deny |  | từ chối ngầm | 暗黙の拒否 | Gói không khớp quy tắc nào bị từ chối | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | IP address | | địa chỉ IP | IPアドレス | Dãy số dùng làm địa chỉ của một máy trên mạng | [01/01](phase-01-foundation/01-packet-journey.md) |
 | IPv4 | IPv4 | địa chỉ IP phiên bản 4 | IPv4アドレス | Địa chỉ dài 32 bit, viết thành bốn số cách nhau bằng dấu chấm | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Lab environment | | môi trường thực hành | ラボ環境 | Nơi chạy lệnh thử mà không ảnh hưởng đến máy hay hệ thống thật | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
@@ -63,6 +67,7 @@
 | NAT (Network Address Translation) | NAT | dịch địa chỉ mạng | NAT | Đổi địa chỉ IP trên gói tin khi nó đi qua thiết bị ở biên mạng | [02/05](phase-02-routing/05-nat-pat.md) |
 | NAT table | | bảng NAT | NATテーブル | Danh sách các kết nối đang có, ghi "địa chỉ:cổng bên trong ↔ bên ngoài" | [02/05](phase-02-routing/05-nat-pat.md) |
 | Negative caching |  | nhớ đáp án phủ định | ネガティブキャッシュ | Resolver cũng cache câu trả lời "tên này không tồn tại" | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
+| Network ACL | NACL | danh sách kiểm soát truy cập mạng | ネットワークACL | Bộ lọc stateless của AWS gắn vào subnet, có cả quy tắc cho phép lẫn từ chối | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Network address | | địa chỉ mạng | ネットワークアドレス | Địa chỉ có mọi bit phần máy bằng 0, dùng để gọi tên cả mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Network interface | | giao diện mạng | ネットワークインターフェース | "Cửa" một máy dùng để nối vào mạng; mỗi cửa có địa chỉ riêng | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
 | Next hop | | chặng kế tiếp | ネクストホップ | Thiết bị mà gói tin được đưa cho ở bước tiếp theo | [02/01](phase-02-routing/01-routing-table-basics.md) |
@@ -103,6 +108,7 @@
 | RST |  | cờ đặt lại | RST | Ngắt kết nối ngay lập tức, thường vì lỗi hoặc vì không có dịch vụ ở cổng đó | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
 | RTT (Round-Trip Time) | RTT | thời gian khứ hồi | 往復遅延時間 | Thời gian từ lúc gửi tới lúc nhận trả lời | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | SAN (Subject Alternative Name) | SAN | tên thay thế của chủ thể | サブジェクト代替名 | Danh sách tên miền mà chứng chỉ có hiệu lực; client so tên truy cập với danh sách này | [04/06](phase-04-transport-app/06-tls-certificates.md) |
+| Security group | SG | nhóm bảo mật | セキュリティグループ | Bộ lọc stateful của AWS gắn vào network interface/tài nguyên, chỉ có quy tắc cho phép | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Segment |  | đoạn | セグメント | Đơn vị dữ liệu ở tầng vận chuyển, bọc bởi header TCP | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | Self-signed certificate |  | chứng chỉ tự ký | 自己署名証明書 | Chứng chỉ do chính chủ ký, không có CA đáng tin xác nhận | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | Sequence number |  | số thứ tự | シーケンス番号 | Số đánh dấu từng byte dữ liệu để bên nhận sắp xếp và xác nhận | [04/01](phase-04-transport-app/01-tcp-handshake-states.md) |
@@ -110,6 +116,7 @@
 | SNI (Server Name Indication) | SNI | chỉ dẫn tên máy chủ | SNI | Client nêu tên miền muốn truy cập ngay trong ClientHello để server chọn đúng chứng chỉ | [04/06](phase-04-transport-app/06-tls-certificates.md) |
 | SOA record |  | bản ghi khởi đầu vùng | SOAレコード | Thông tin quản trị của một zone, gồm giá trị quyết định thời gian nhớ đáp án phủ định | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Split-horizon DNS |  | DNS chân trời kép | スプリットホライズンDNS | Cùng một tên miền nhưng câu trả lời khác nhau tùy máy hỏi ở trong hay ngoài mạng | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
+| Stateful |  | có trạng thái | ステートフル | Bộ lọc nhớ các kết nối đang diễn ra nên tự cho phép gói trả lời của kết nối đã được phép | [05/03](phase-05-security/03-sg-vs-nacl-concept.md) |
 | Stateless |  | không lưu trạng thái | ステートレス | Mỗi yêu cầu tự đủ thông tin, server không dựa vào yêu cầu trước | [04/05](phase-04-transport-app/05-http.md) |
 | Status code |  | mã trạng thái | ステータスコード | Số ba chữ số trong phản hồi HTTP nói kết quả, ví dụ 200, 404, 502 | [04/05](phase-04-transport-app/05-http.md) |
 | Subnet | | mạng con | サブネット | Một phần của mạng lớn, chia ra để quản lý và cô lập | [01/05](phase-01-foundation/05-cidr-subnetting.md) |

@@ -21,6 +21,8 @@ python -m venv .venv ; .venv\Scripts\pip install -r requirements.txt
 .venv\Scripts\python tools\lint_chapters.py
 ```
 
+Vì `mkdocs.yml` đặt `site_url`, site cục bộ nằm ở `http://127.0.0.1:8005/ccna-handbook/` (không phải gốc `/`).
+
 ## Lưu ý
 
 - Ví dụ dùng hệ thống giả `shopnet` và các dải IP dành cho tài liệu (RFC 5737) hoặc private (RFC 1918); không có dữ liệu thật.

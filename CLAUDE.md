@@ -56,7 +56,7 @@ Nhánh `chapter/phase-NN-<slug>`; commit nhỏ, một ý một commit: `docs(pha
 ## 7. Commands (cập nhật khi có `requirements.txt`/`mkdocs.yml`)
 ```powershell
 python -m venv .venv ; .venv\Scripts\pip install -r requirements.txt   # powershell
-.venv\Scripts\mkdocs serve -a 127.0.0.1:8005                            # powershell (WSL/bash: .venv/bin/mkdocs)
+.venv\Scripts\mkdocs serve -a 127.0.0.1:8005                            # powershell; mở /ccna-handbook/ (site_url có tiền tố); WSL/bash: .venv/bin/mkdocs
 .venv\Scripts\mkdocs build --strict                                     # powershell, kiểm tra build
 .venv\Scripts\python tools/lint_chapters.py                             # powershell; thêm --sensitive-only khi chỉ cần quét nhạy cảm
 ```
@@ -67,7 +67,7 @@ python -m venv .venv ; .venv\Scripts\pip install -r requirements.txt   # powersh
 - **Giai đoạn 0 đã xong (2026-10-02):** `mkdocs.yml`, `requirements.txt` (ghim `mkdocs<2`), `.gitignore`, `.gitattributes` (LF), `.claude/launch.json`, `tools/lint_chapters.py`, `tools/forbidden-terms.example.txt`, `book/index.md`, `spec/ccna-coverage-map.md` (khung), `spec/sources/README.md`, `spec/raw-interview-questions.md` (khung).
 - **Đã scaffold (2026-10-02):** 59 chapter `Status: todo` + `book/phase-08-.../00-resolved-gap-log.md`, sinh từ bảng `spec/part-4-roadmap.md` (metadata, 18 mục, `> Xem lại:` ở mục 3, comment mức bắt buộc theo Importance). H1 hiện là `# TODO — tiêu đề dạng câu hỏi`; người học đặt Title khi viết.
 - **Chapter đã soạn (DRAFT theo yêu cầu người dùng; người dùng duyệt 2026-10-02):** `01/01-packet-journey` (`Status: reviewed`, chưa `done` vì lab `[CHƯA CHẠY]`; thuật ngữ đã vào `book/glossary.md`; lab ở `labs/phase-01-foundation/chapter-01-packet-journey/`).
-- **Đã soạn nháp (`Status: draft`, chờ review):** `00/01`, `00/02`, `01/02`, `01/03`, `01/04`, `01/05`, `01/06`, `02/01`, `02/03`, `02/05`, `03/01`, `03/02` (mỗi chapter có lab README ở `labs/`, lab `[CHƯA CHẠY]`; 13 sơ đồ Mermaid kiểm tra bằng `mermaid.parse` trên trình duyệt). Còn thiếu tiền đề: `02/02-longest-prefix-match` (được `02/03` trỏ tới, vẫn `todo`).
+- **Đã soạn nháp (`Status: draft`, chờ review):** `00/01`, `00/02`, `01/02`, `01/03`, `01/04`, `01/05`, `01/06`, `02/01`, `02/02`, `02/03`, `02/05`, `03/01`, `03/02` (mỗi chapter có lab README ở `labs/`, lab `[CHƯA CHẠY]`; sơ đồ Mermaid kiểm tra bằng `mermaid.parse` trên trình duyệt). Chuỗi tiền đề của lát cắt giai đoạn 2 đã đủ.
 - **Deploy:** `.github/workflows/deploy.yml` build và đưa lên GitHub Pages khi push vào `main`; cần người dùng đặt Pages source = "GitHub Actions" trong cài đặt repo.
 - **Chờ người dùng:** PDF blueprint vào `spec/sources/`; câu hỏi phỏng vấn thô; tạo `tools/forbidden-terms.local.txt`. Chưa scaffold: `book/glossary.md`, `cross-reference-index.md`, `troubleshooting-playbook.md` (tạo khi có nội dung đầu tiên).
 

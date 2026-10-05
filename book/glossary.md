@@ -39,6 +39,7 @@
 | Host | | máy chủ vật chủ | ホスト | Máy thật đang chạy mọi thứ khác (ở đây là máy Windows của bạn) | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | HTTP | HTTP | giao thức web | HTTP | Cách trình duyệt và server nói chuyện với nhau | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
 | ICMP (Internet Control Message Protocol) | ICMP | giao thức thông điệp điều khiển Internet | ICMP | Giao thức đi kèm IP, dùng để báo lỗi và kiểm tra liên lạc | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
+| Idempotent |  | lặp lại được | 冪等 | Gửi nhiều lần cho kết quả như gửi một lần | [04/05](phase-04-transport-app/05-http.md) |
 | IP address | | địa chỉ IP | IPアドレス | Dãy số dùng làm địa chỉ của một máy trên mạng | [01/01](phase-01-foundation/01-packet-journey.md) |
 | IPv4 | IPv4 | địa chỉ IP phiên bản 4 | IPv4アドレス | Địa chỉ dài 32 bit, viết thành bốn số cách nhau bằng dấu chấm | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Lab environment | | môi trường thực hành | ラボ環境 | Nơi chạy lệnh thử mà không ảnh hưởng đến máy hay hệ thống thật | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
@@ -50,6 +51,7 @@
 | Longest prefix match |  | khớp tiền tố dài nhất | 最長一致 | Quy tắc chọn dòng route có độ dài prefix lớn nhất trong những dòng cùng khớp địa chỉ đích | [02/02](phase-02-routing/02-longest-prefix-match.md) |
 | Loopback | | vòng lặp nội bộ | ループバック | Địa chỉ (`127.0.0.1`) để máy nói chuyện với chính nó | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | MAC address | MAC | địa chỉ phần cứng | MACアドレス | Mã định danh của card mạng | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
+| Method |  | phương thức | メソッド | Động từ của yêu cầu HTTP, ví dụ GET để lấy, POST để gửi dữ liệu xử lý | [04/05](phase-04-transport-app/05-http.md) |
 | Metric | | số đo chi phí | メトリック | Khi nhiều dòng route cùng khớp, dòng có số nhỏ hơn được ưu tiên | [02/01](phase-02-routing/01-routing-table-basics.md) |
 | MTU (Maximum Transmission Unit) | MTU | kích thước gói tối đa | MTU | Gói lớn nhất một đường truyền chuyển được mà không phải chia nhỏ | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | MX record |  | bản ghi thư | MXレコード | Nơi nhận email cho miền | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
@@ -71,6 +73,7 @@
 | PAT | PAT | dịch cổng và địa chỉ | PAT | Dạng NAT đổi cả địa chỉ lẫn cổng, để nhiều máy dùng chung một địa chỉ công khai (còn gọi là NAPT) | [02/05](phase-02-routing/05-nat-pat.md) |
 | Path MTU Discovery | PMTUD | dò MTU của cả đường đi | パスMTUディスカバリ | Cách máy tìm MTU nhỏ nhất trên đường tới đích nhờ thông điệp ICMP | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | pcap file |  | tệp bắt gói tin | pcapファイル | Tệp lưu các gói tin đã bắt; không commit vào repo vì có thể chứa dữ liệu nhạy cảm | [00/03](phase-00-lab-toolkit/03-packet-capture.md) |
+| Persistent connection |  | kết nối bền | 持続的接続 | Một kết nối TCP được dùng cho nhiều cặp yêu cầu/phản hồi | [04/05](phase-04-transport-app/05-http.md) |
 | Ping |  | lệnh thử liên lạc | ping | Gửi ICMP echo tới một đích và chờ echo trả lời | [03/04](phase-03-core-services/04-icmp-ping-traceroute.md) |
 | Port | | cổng | ポート | Con số đánh dấu một dịch vụ trên máy; IP chọn máy, cổng chọn dịch vụ | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
 | Prefix length | | độ dài tiền tố | プレフィックス長 | Số bit đầu thuộc phần mạng, số sau dấu `/` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
@@ -80,8 +83,10 @@
 | PTR record |  | bản ghi tra ngược | PTRレコード | Đổi địa chỉ IP thành tên | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Public IP address | | địa chỉ IP công khai | グローバルIPアドレス | Địa chỉ duy nhất toàn Internet, ai cũng gửi gói tới được | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Recursive resolver | | bộ phân giải đệ quy | 再帰リゾルバー | Máy chủ DNS nhận câu hỏi của máy bạn rồi tự hỏi các máy chủ khác cho tới khi có đáp án | [03/02](phase-03-core-services/02-dns-resolution.md) |
+| Request |  | yêu cầu | リクエスト | Một chiều của lần trao đổi HTTP: phía gửi nêu phương thức và đích | [04/05](phase-04-transport-app/05-http.md) |
 | Reservation | | đặt trước | 予約 | Luôn cấp cùng một địa chỉ cho một MAC address nhất định | [03/01](phase-03-core-services/01-dhcp.md) |
 | Resolver | | bộ phân giải | リゾルバー | Phần mềm/máy chủ nhận câu hỏi "tên này là IP nào" rồi đi tìm đáp án | [03/02](phase-03-core-services/02-dns-resolution.md) |
+| Response |  | phản hồi | レスポンス | Chiều trả lời của HTTP: mã trạng thái kèm nội dung | [04/05](phase-04-transport-app/05-http.md) |
 | RFC 1918 |  | dải địa chỉ riêng theo RFC 1918 | RFC 1918 | Tài liệu chuẩn định nghĩa ba dải địa chỉ private | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Root server | | máy chủ gốc | ルートサーバー | Tầng trên cùng của cây DNS; chỉ đường xuống tầng dưới | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Route | | tuyến | 経路 | Một dòng trong bảng định tuyến | [02/01](phase-02-routing/01-routing-table-basics.md) |
@@ -96,6 +101,8 @@
 | Shared address space | CGNAT | không gian địa chỉ dùng chung | 共有アドレス空間 | Dải `100.64.0.0/10` nhà mạng dùng cho CGNAT; không phải private cũng không phải public | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | SOA record |  | bản ghi khởi đầu vùng | SOAレコード | Thông tin quản trị của một zone, gồm giá trị quyết định thời gian nhớ đáp án phủ định | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Split-horizon DNS |  | DNS chân trời kép | スプリットホライズンDNS | Cùng một tên miền nhưng câu trả lời khác nhau tùy máy hỏi ở trong hay ngoài mạng | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
+| Stateless |  | không lưu trạng thái | ステートレス | Mỗi yêu cầu tự đủ thông tin, server không dựa vào yêu cầu trước | [04/05](phase-04-transport-app/05-http.md) |
+| Status code |  | mã trạng thái | ステータスコード | Số ba chữ số trong phản hồi HTTP nói kết quả, ví dụ 200, 404, 502 | [04/05](phase-04-transport-app/05-http.md) |
 | Subnet | | mạng con | サブネット | Một phần của mạng lớn, chia ra để quản lý và cô lập | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Subnet mask | | mặt nạ mạng | サブネットマスク | Dãy 32 bit cho biết bao nhiêu bit đầu của địa chỉ thuộc phần mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Subnetting | | chia mạng con | サブネット化 | Việc cắt một mạng thành nhiều mạng con | [01/05](phase-01-foundation/05-cidr-subnetting.md) |

@@ -7,3 +7,7 @@ __pycache__/
 # Cục bộ / nhạy cảm — KHÔNG commit (CLAUDE.md mục 4, 6)
 .claude/settings.local.json
 tools/forbidden-terms.local.txt
+
+# Tệp bắt gói tin có thể chứa dữ liệu nhạy cảm — KHÔNG commit (book/phase-00 chapter 03)
+*.pcap
+*.pcapng

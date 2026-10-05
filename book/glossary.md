@@ -4,6 +4,7 @@
 
 | English | Viết tắt | Tiếng Việt | 日本語 | Giải thích đơn giản | Chapter |
 |---|---|---|---|---|---|
+| A record |  | bản ghi A | Aレコード | Bản ghi đổi tên thành địa chỉ IPv4 (AAAA: IPv6) | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Address pool | | dải địa chỉ cấp phát | アドレスプール | Khoảng địa chỉ mà DHCP server được phép cho thuê | [03/01](phase-03-core-services/01-dhcp.md) |
 | ARP (Address Resolution Protocol) | ARP | giao thức phân giải địa chỉ | ARP | Cách máy hỏi "IP này là MAC nào?" trong cùng một mạng | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | ARP cache |  | bảng ARP | ARPキャッシュ | Bảng ghi nhớ các cặp IP ↔ MAC đã học | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
@@ -14,6 +15,7 @@
 | Broadcast address | | địa chỉ quảng bá | ブロードキャストアドレス | Địa chỉ có mọi bit phần máy bằng 1; gửi đến đó là gửi cho mọi máy trong mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Cache | | bộ nhớ đệm | キャッシュ | Nơi lưu tạm câu trả lời để lần sau dùng lại | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | CIDR (Classless Inter-Domain Routing) | CIDR | định tuyến liên miền không phân lớp | CIDR | Cách viết dải địa chỉ bằng địa chỉ cộng độ dài phần mạng, ví dụ `10.0.1.0/24` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
+| CNAME record |  | bản ghi bí danh | CNAMEレコード | Nói "tên này là bí danh của tên kia"; resolver hỏi tiếp tên đích | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Container | | vùng chạy riêng | コンテナ | Chương trình chạy tách biệt khỏi phần còn lại của máy, có mạng và hệ thống file riêng | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | Container image | | ảnh container | コンテナイメージ | Gói chứa chương trình và môi trường, dùng làm "khuôn" tạo container | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
 | Default gateway | | cổng mặc định | デフォルトゲートウェイ | Router mà máy gửi mọi gói tin có đích nằm ngoài LAN | [01/01](phase-01-foundation/01-packet-journey.md) |
@@ -21,6 +23,7 @@
 | DHCP (Dynamic Host Configuration Protocol) | DHCP | giao thức cấp địa chỉ tự động | DHCP | Cách một server cấp IP và thông số mạng cho máy vừa vào mạng | [03/01](phase-03-core-services/01-dhcp.md) |
 | DHCP server | | máy chủ DHCP | DHCPサーバー | Thiết bị giữ danh sách địa chỉ và cấp cho máy xin | [03/01](phase-03-core-services/01-dhcp.md) |
 | DNS | DNS | hệ thống tên miền | DNS（名前解決） | "Danh bạ" đổi tên như `www.shopnet.example` thành địa chỉ IP | [01/01](phase-01-foundation/01-packet-journey.md) |
+| DNS record |  | bản ghi DNS | DNSレコード | Một dòng dữ liệu trong cơ sở dữ liệu DNS, gồm tên, loại, giá trị và TTL | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | DNS TTL | | thời gian lưu của bản ghi DNS | DNSのTTL | Số giây câu trả lời DNS được phép nằm trong cache (khác TTL của gói tin) | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Documentation address range |  | dải địa chỉ dành cho tài liệu | ドキュメント用アドレス範囲 | Dải cố ý không dùng thật, để làm ví dụ mà không trỏ nhầm tới ai | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Encapsulation |  | đóng gói | カプセル化 | Mỗi tầng bọc dữ liệu của tầng trên bằng header của mình | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
@@ -43,12 +46,15 @@
 | Loopback | | vòng lặp nội bộ | ループバック | Địa chỉ (`127.0.0.1`) để máy nói chuyện với chính nó | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | MAC address | MAC | địa chỉ phần cứng | MACアドレス | Mã định danh của card mạng | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | Metric | | số đo chi phí | メトリック | Khi nhiều dòng route cùng khớp, dòng có số nhỏ hơn được ưu tiên | [02/01](phase-02-routing/01-routing-table-basics.md) |
+| MX record |  | bản ghi thư | MXレコード | Nơi nhận email cho miền | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Name resolution | | phân giải tên | 名前解決 | Việc đổi một tên thành địa chỉ IP | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | NAT (Network Address Translation) | NAT | dịch địa chỉ mạng | NAT | Đổi địa chỉ IP trên gói tin khi nó đi qua thiết bị ở biên mạng | [02/05](phase-02-routing/05-nat-pat.md) |
 | NAT table | | bảng NAT | NATテーブル | Danh sách các kết nối đang có, ghi "địa chỉ:cổng bên trong ↔ bên ngoài" | [02/05](phase-02-routing/05-nat-pat.md) |
+| Negative caching |  | nhớ đáp án phủ định | ネガティブキャッシュ | Resolver cũng cache câu trả lời "tên này không tồn tại" | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Network address | | địa chỉ mạng | ネットワークアドレス | Địa chỉ có mọi bit phần máy bằng 0, dùng để gọi tên cả mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Network interface | | giao diện mạng | ネットワークインターフェース | "Cửa" một máy dùng để nối vào mạng; mỗi cửa có địa chỉ riêng | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
 | Next hop | | chặng kế tiếp | ネクストホップ | Thiết bị mà gói tin được đưa cho ở bước tiếp theo | [02/01](phase-02-routing/01-routing-table-basics.md) |
+| NS record |  | bản ghi máy chủ tên | NSレコード | Chỉ ra máy chủ nào có thẩm quyền cho một miền | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Octet | | octet | オクテット | Nhóm 8 bit; mỗi số trong địa chỉ IPv4 là một octet (0–255) | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Off-link |  | nằm ngoài đường dây | 直接接続されていない | Địa chỉ không thuộc mạng máy nối trực tiếp, nên không gửi thẳng tới được | [02/03](phase-02-routing/03-default-route-gateway.md) |
 | On-link | | nằm ngay trên đường dây | 直接接続 | Đích ở cùng mạng, gửi thẳng không qua router | [02/01](phase-02-routing/01-routing-table-basics.md) |
@@ -57,8 +63,10 @@
 | PAT | PAT | dịch cổng và địa chỉ | PAT | Dạng NAT đổi cả địa chỉ lẫn cổng, để nhiều máy dùng chung một địa chỉ công khai (còn gọi là NAPT) | [02/05](phase-02-routing/05-nat-pat.md) |
 | Port | | cổng | ポート | Con số đánh dấu một dịch vụ trên máy; IP chọn máy, cổng chọn dịch vụ | [00/02](phase-00-lab-toolkit/02-linux-network-tools.md) |
 | Prefix length | | độ dài tiền tố | プレフィックス長 | Số bit đầu thuộc phần mạng, số sau dấu `/` | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
+| Private DNS |  | DNS nội bộ | プライベートDNS | Vùng DNS chỉ trả lời cho máy trong một mạng nhất định, không công khai | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Private IP address | | địa chỉ IP riêng | プライベートIPアドレス | Địa chỉ thuộc dải dành cho mạng nội bộ; Internet không định tuyến dải này | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Protocol |  | giao thức | プロトコル | Bộ quy tắc hai bên cùng tuân theo để nói chuyện | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
+| PTR record |  | bản ghi tra ngược | PTRレコード | Đổi địa chỉ IP thành tên | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Public IP address | | địa chỉ IP công khai | グローバルIPアドレス | Địa chỉ duy nhất toàn Internet, ai cũng gửi gói tới được | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
 | Recursive resolver | | bộ phân giải đệ quy | 再帰リゾルバー | Máy chủ DNS nhận câu hỏi của máy bạn rồi tự hỏi các máy chủ khác cho tới khi có đáp án | [03/02](phase-03-core-services/02-dns-resolution.md) |
 | Reservation | | đặt trước | 予約 | Luôn cấp cùng một địa chỉ cho một MAC address nhất định | [03/01](phase-03-core-services/01-dhcp.md) |
@@ -72,10 +80,14 @@
 | Routing table | | bảng định tuyến | ルーティングテーブル | Danh sách "đích nào thì gửi qua đường nào" mà mỗi thiết bị giữ | [02/01](phase-02-routing/01-routing-table-basics.md) |
 | Segment |  | đoạn | セグメント | Đơn vị dữ liệu ở tầng vận chuyển, bọc bởi header TCP | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | Shared address space | CGNAT | không gian địa chỉ dùng chung | 共有アドレス空間 | Dải `100.64.0.0/10` nhà mạng dùng cho CGNAT; không phải private cũng không phải public | [01/06](phase-01-foundation/06-private-public-ip-rfc1918.md) |
+| SOA record |  | bản ghi khởi đầu vùng | SOAレコード | Thông tin quản trị của một zone, gồm giá trị quyết định thời gian nhớ đáp án phủ định | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
+| Split-horizon DNS |  | DNS chân trời kép | スプリットホライズンDNS | Cùng một tên miền nhưng câu trả lời khác nhau tùy máy hỏi ở trong hay ngoài mạng | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | Subnet | | mạng con | サブネット | Một phần của mạng lớn, chia ra để quản lý và cô lập | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Subnet mask | | mặt nạ mạng | サブネットマスク | Dãy 32 bit cho biết bao nhiêu bit đầu của địa chỉ thuộc phần mạng | [01/04](phase-01-foundation/04-ipv4-addressing.md) |
 | Subnetting | | chia mạng con | サブネット化 | Việc cắt một mạng thành nhiều mạng con | [01/05](phase-01-foundation/05-cidr-subnetting.md) |
 | Switch |  | bộ chuyển mạch | スイッチ | Thiết bị nối các máy trong cùng mạng, chuyển khung theo MAC | [01/03](phase-01-foundation/03-ethernet-mac-arp.md) |
 | TCP/IP model |  | mô hình TCP/IP | TCP/IPモデル | Mô hình 4 tầng mô tả cách Internet thực sự vận hành | [01/02](phase-01-foundation/02-osi-vs-tcpip.md) |
 | TTL (Time To Live) | TTL | thời gian sống | 生存時間 | Số chặng tối đa còn lại của gói tin; mỗi router trừ 1, về 0 thì gói bị bỏ | [01/01](phase-01-foundation/01-packet-journey.md) |
+| TXT record |  | bản ghi văn bản | TXTレコード | Chuỗi chữ tùy ý, thường dùng để xác minh quyền sở hữu hoặc cấu hình xác thực email | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
 | WSL2 | WSL2 | WSL phiên bản 2 | WSL2 | Cách chạy Linux ngay trong Windows | [00/01](phase-00-lab-toolkit/01-lab-environment.md) |
+| Zone |  | vùng | ゾーン | Phần của cây DNS mà một bên quản lý và giữ bản ghi | [03/03](phase-03-core-services/03-dns-records-ttl-private-dns.md) |
